@@ -194,8 +194,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    const heroChatOffset = document.documentElement.style;
+    const chatDown = document.getElementById('chat-down');
+    const chatUp = document.getElementById('chat-up');
+
+    const offsetValue = () => parseFloat(getComputedStyle(document.documentElement)
+        .getPropertyValue('--hero-chat-offset')) || 0;
+
+    const changeOffset = (delta) => {
+        let next = parseFloat((offsetValue() + delta).toFixed(2));
+        next = Math.min(3.5, Math.max(-1, next));
+        heroChatOffset.setProperty('--hero-chat-offset', `${next}rem`);
+    };
+
+    if (chatDown && chatUp) {
+        chatDown.addEventListener('click', () => changeOffset(0.25));
+        chatUp.addEventListener('click', () => changeOffset(-0.25));
+    }
+
     document.querySelectorAll('.treatment-cell').forEach(card => {
-        card.addEventListener('click', () => openModal(card));
+        card.addEventListener('click', () => {
+            if (activeCell) {
+                activeCell.classList.remove('active');
+                activeCell = null;
+            }
+            openModal(card);
+        });
     });
 
     document.querySelectorAll('.treatment-view-more').forEach(button => {

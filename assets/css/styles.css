@@ -550,13 +550,6 @@ img {
 }
 
 @media (max-width: 768px) {
-    .treatments-grid--table {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
     /* compacto alineado a la izquierda con fondo violeta suave */
     .hero {
         min-height: auto;                         /* deja que la altura dependa exclusivamente del contenido */
@@ -565,12 +558,10 @@ img {
         justify-content: flex-start;              /* evita el espacio distribuido */
         background: linear-gradient(
             90deg,
-            #ffffff 50%,
-            #ffffff 50%,
-            #ffffff 50%,
-            #bc9bff 50%,
+            #ffffff 55%,
+            #bc9bff 55%,
             #bc9bff 100%
-        );                                        /* reproduce el fondo blanco + violeta de la versión compacta */
+        );                                        /* divide el fondo móvil: mitad blanca y mitad violeta */
         position: relative;                        /* habilita posicionamientos absolutos dentro del hero */
         overflow: hidden;                          /* evita que la imagen absolute sobresalga */
     }
@@ -654,11 +645,12 @@ img {
     }
 
     .hero-buttons .btn-primary {
+        margin-top: 0.4rem;           /* baja el botón WhatsApp del borde superior del hero */
         transform: translateX(-0.3rem);       /* empuja el botón principal hacia la izquierda */
     }
 
     .hero-buttons .btn-secondary {
-        transform: translateX(0);             /* el botón secundario se mantiene en su posición natural */
+        transform: none;             /* el botón secundario se mantiene en su posición natural */
     }
 
     .hero-buttons .btn:first-child {
@@ -1544,37 +1536,46 @@ transform: translateY(-2px);
 
 @media (max-width: 768px) {
     .hero {
-        min-height: calc(100vh - 120px);        /* solo en móvil se reduce para eliminar margen */
-        padding: var(--space-sm) var(--space-md);  /* reduce padding superior e inferior de forma compacta */
+        min-height: auto;
+        padding: 1.5rem var(--space-sm);
     }
-    .hero-text h1 {
-        transform: translate(-2rem, 1rem);        /* baja el texto un poco */
-    }
-    .hero-text .subtitle {
-        transform: translate(-2rem, 0.8rem);
-    }
-    .hero-buttons {
-        display: flex;
-        width: 100%;
-        justify-content: flex-start;
-        gap: 0.5rem;
-        flex-wrap: nowrap;
-        transform: none; /* asegura que se mantengan en la misma fila */
-    }
-    .hero-buttons .btn {
-        flex: 1 1 48%;
-        min-width: 0;
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
         text-align: center;
     }
-    .hero-buttons .btn-primary {
-        transform: translateX(-10rem);       /* empuja suavemente el botón principal a la izquierda */
+    .hero-text {
+        max-width: 100%;
+        padding: 0 0.5rem;
     }
-    .hero-buttons .btn-secondary {
-        transform: translateX(-11rem);             /* mantiene 'Ver Tratamientos' en su posición natural */
+    .hero-text h1,
+    .hero-text .subtitle {
+        transform: none;
+    }
+    .hero-buttons {
+        justify-content: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+    .hero-buttons .btn {
+        flex: 1 1 45%;
+        max-width: 220px;
+    }
+    .hero-buttons .btn-primary {
+        margin-top: 0.4rem;
+    }
+    .hero-image {
+        padding-right: 0;
+        justify-content: center;
     }
     .hero-image .image-container {
-        width: min(280px, 70vw);
-        min-height: 260px;
+        width: min(260px, 60vw);
+        min-height: 220px;
+        transform: none;
+        margin-left: 0;
+        padding: 0.5rem;
     }
 }
 
