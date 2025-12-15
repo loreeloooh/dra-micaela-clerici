@@ -127,8 +127,7 @@
             color: var(--lavanda);
         }
 
-        @media (max-width: 768px) {
-            .contacto-container {
+                    .contacto-container {
                 margin-top: 100px;
             }
         }

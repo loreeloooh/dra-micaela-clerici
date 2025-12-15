@@ -552,6 +552,7 @@ img {
         padding-bottom: 2rem;
         align-items: flex-start;
         justify-content: center;
+        
     }
 
     .hero::before,
@@ -786,7 +787,7 @@ img {
 
     .doctor-image {
         position: relative;
-        z-index: 20;
+        z-index: 1;
         object-fit: cover;
         object-position: center top;
         min-height: 260px; /* extiende la tarjeta hacia abajo para que el retrato luzca más alto */
@@ -1418,7 +1419,7 @@ transform: translateY(-2px);
 
 @media (max-width: 768px) {
     .gallery-card iframe {
-        min-height: 450px;
+        min-height: 280px;
     }
 }
 
