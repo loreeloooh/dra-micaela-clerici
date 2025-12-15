@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces - Dra. Micaela Clerici</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glacier+Indifference&family=Hatton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="linktree-body">
+    <header class="linktree-header">
+        <nav class="navbar" aria-label="Menú principal">
+            <div class="nav-container">
+                <a class="logo" href="index.html">Dra. Micaela Clerici</a>
+                <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú de navegación">
+                    <span class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="index.html#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                    <li><a href="index.html#tratamientos" class="nav-link">Tratamientos</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    <li><a href="linktree.html" class="nav-link active">Enlaces</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="linktree-page">
+        <section class="linktree-panel">
+            <button class="linktree-icon-btn">
+                <span class="sr-only">Opciones</span>
+                <i class="fas fa-star"></i>
+            </button>
+            <div class="linktree-avatar">
+                <img src="assets/images/dra logo.png" alt="Dra. Micaela Clerici">
+            </div>
+            <p class="linktree-username">@dra.clerici</p>
+            <div class="linktree-list">
+                <a href="https://wa.me/543416427796" class="linktree-list-item" target="_blank" rel="noreferrer">
+                    <span>Consultar por WhatsApp</span>
+                    <i class="fas fa-ellipsis-v"></i>
+                </a>
+                <a href="https://www.instagram.com/dra.micaelaclerici/" class="linktree-list-item" target="_blank" rel="noreferrer">
+                    <span>Instagram - Antes y después</span>
+                    <i class="fas fa-ellipsis-v"></i>
+                </a>
+                <a href="https://www.facebook.com/people/Dra-Micaela-Clerici/61561142408082/" class="linktree-list-item" target="_blank" rel="noreferrer">
+                    <span>Facebook - Comunidad</span>
+                    <i class="fas fa-ellipsis-v"></i>
+                </a>
+                <a href="https://www.tiktok.com/@dra.micaelacleric" class="linktree-list-item" target="_blank" rel="noreferrer">
+                    <span>TikTok - Tips express</span>
+                    <i class="fas fa-ellipsis-v"></i>
+                </a>
+                <a href="https://dramicaelaclerici.com" class="linktree-list-item" target="_blank" rel="noreferrer">
+                    <span>Website oficial</span>
+                    <i class="fas fa-ellipsis-v"></i>
+                </a>
+            </div>
+           
+        </section>
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('is-active');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
