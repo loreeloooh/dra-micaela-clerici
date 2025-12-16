@@ -461,6 +461,7 @@ img {
     .intro-principios .mini-card-principio {
         max-width: 320px;
         margin: 0 auto;
+        text-align: left;
     }
 }
 
@@ -586,173 +587,26 @@ img {
 }
 
 @media (max-width: 768px) {
-    /* compacto alineado a la izquierda con fondo violeta suave */
     .hero {
-        min-height: auto;                         /* deja que la altura dependa exclusivamente del contenido */
-        padding: 1rem 0.75rem 0.8rem;             /* reduce el padding lateral para acercar el texto al borde */
-        align-items: flex-start;                  /* alinea los elementos al inicio vertical */
-        justify-content: flex-start;              /* evita el espacio distribuido */
-        background: linear-gradient(
-            90deg,
-            #ffffff 55%,
-            #bc9bff 55%,
-            #bc9bff 100%
-        );                                        /* divide el fondo móvil: mitad blanca y mitad violeta */
-        position: relative;                        /* habilita posicionamientos absolutos dentro del hero */
-        overflow: hidden;                          /* evita que la imagen absolute sobresalga */
-    }
-
-    /* Glow de fondo para mantener profundidad sin ampliar la caja principal */
-    .hero::before,
-    .hero::after {
-        left: auto;                               /* elimina desplazamientos al otro lado */
-        right: 0;                                 /* pega las pseudo-capas al borde derecho */
-        top: 10px;                                /* las posiciona ligeramente más abajo */
-        bottom: -25px;                            /* alarga el glow hacia abajo */
-        border-radius: 32px;                      /* mantiene la curvatura del hero */
-        background: linear-gradient(180deg, rgba(188, 155, 255, 0.18), rgba(188, 155, 255, 0.35));
-        filter: blur(12px);                       /* difumina el overlay para simular luz filtrada */
-    }
-
-    /* Contenedor del texto a todo ancho y sin rellenos adicionales */
-    .hero-content {
-        width: 100%;                              /* ocupa todo el ancho disponible */
-        padding: 0;                               /* elimina relleno */
-        margin: 0;                                /* elimina márgenes */
-        gap: 0.4rem;                              /* separación controlada entre elementos */
-        align-items: flex-start;                  /* alinea al margen izquierdo */
-        text-align: left;                         /* mantiene el texto alineado hacia la izquierda */
-        position: relative;                       /* establece contexto de stacking */
-        z-index: 4;                               /* al frente de la imagen */
-        flex-direction: column;                   /* organiza texto y botones en columna */
-        backdrop-filter: blur(5px);               /* suaviza ligeramente el fondo detrás del contenido */
-        margin-top: 10rem;    
-    }
-        
-    /* Las siguientes reglas centran el título y subtítulo dentro del bloque */
-    /* Título centrado y contenido apilado */
-    .hero-text h1 {
-        font-size: 1.9rem;
-        margin-bottom: 0;
-        letter-spacing: 0.15em;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        margin-left: 0;
-        transform: none;
-    }
-
-    .hero-text .subtitle {
-        transform: none;
-        text-align: center;
-    }
-
-    .hero-text {
-        width: 100%;
-        padding: 0;
-        margin: 0 auto;
-        text-align: center;
-        position: relative;
-        z-index: 5;
-    }
-
-    /* Botones en fila con espacio reducido */
-    .hero-buttons {
-        display: flex;                             /* asegura que los botones compartan fila */
-        flex-direction: row;
-        width: 100%;
-        gap: 0.75rem;
+        min-height: auto;
+        padding: 9rem 0.5rem 0.8rem;
         padding-left: 0;
-        padding-right: 0;
-        align-items: center;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
+        align-items: flex-start;
+        display: flex;
+        text-align: left;
     }
 
-    .hero-buttons .btn {
-        padding: 0.55rem 1.5rem; /* Reduce padding for shorter buttons */
-        font-size: 0.85rem;
-        border-radius: 999px;
-        min-width: unset;
-        width: auto;
-        max-width: 220px; /* limit length */
-        white-space: nowrap;
-        text-align: center;
-        flex: 1 1 48%;       /* cada botón comparte el mismo ancho */
-        min-width: 0;
-    }
-
-    .hero-buttons .btn-primary {
-        margin-top: 0.4rem;           /* baja el botón WhatsApp del borde superior del hero */
-        transform: translateX(-0.3rem);       /* empuja el botón principal hacia la izquierda */
-    }
-
-    .hero-buttons .btn-secondary {
-        transform: none;             /* el botón secundario se mantiene en su posición natural */
-    }
-
-    .hero-buttons .btn:first-child {
-        margin-left: 0;
-    }
-
-    .hero-buttons .btn:active,
-    .hero-buttons .btn:focus-visible {
-        transform: scale(0.98);
-        box-shadow: 0 16px 28px rgba(123, 93, 205, 0.35);
-    }
-
-    .hero-buttons .btn-primary {
-        min-width: 220px;
-        max-width: 260px;
-        box-shadow: 0 22px 45px rgba(123, 93, 205, 0.3);
-    }
-
-    /* Imagen debajo del texto, centrada, manteniendo la alineación compacta */
-    .hero-image {
+    .hero-content,
+    .hero-text,
+    .hero-text h1,
+    .hero-text .subtitle {
+        text-align: left !important;
+        align-items: flex-start !important;
         width: 100%;
-        margin-top: 0.8rem;
-        justify-content: center;
-        padding-right: 0;
-        order: 2;                                  /* fuerza que aparezca después del texto */
-        margin-left: auto;                        /* empuja la imagen hacia la derecha */
-        position: absolute;                       /* fuera del flujo para que el contenido flote encima */
-        right: -5rem;                              /* la empuja hacia el borde derecho */
-        top: -20rem;                              /* la coloca a la altura del texto */
-        transform: translateX(12%);               /* la desplaza hacia la derecha */
-        z-index: 2;                               /* detrás del texto pero sobre el fondo */
     }
 
-    .image-container {
-        width: min(260px, 50vw);                  /* limita la anchura para conservar proporciones */
-        min-height: 260px;                        /* asegura altura suficiente */
-        padding: 3rem 2rem;                       /* espacio interno para que la imagen respire */
-        margin: 0;                                /* elimina márgenes */
-        border-radius: 32px;
-        background: rgba(255, 255, 255, 0.85);    /* semitransparente para permitir lectura */
-        box-shadow: 0 30px 50px rgba(39, 36, 37, 0.12);
-        position: relative;
-        overflow: hidden;
-        transform: rotate(-1deg) translateY(-3px);
-        z-index: 2;
-    }
-
-    .image-container::before {
-        inset: -10% 5% auto;
-        height: 70%;
-        border-radius: 24px;
-        background: rgba(188, 155, 255, 0.3);
-        filter: blur(12px);
-        z-index: 0;
-    }
-
-    .doctor-image {
-        position: relative;
-        z-index: 0;
-        object-fit: cover;
-        object-position: center top;
-        min-height: 260px;
-        max-height: 700px;
+    .hero-buttons {
+        justify-content: flex-start !important;
         width: 100%;
     }
 
@@ -977,7 +831,7 @@ img {
 
 @media (max-width: 768px) {
     .contact-page {
-        padding: 3rem 1rem 2rem;
+        padding: 30rem 1rem 2rem;
     }
     .contact-hero {
         padding: 1.75rem;
@@ -985,6 +839,11 @@ img {
     .contact-hero-buttons {
         flex-direction: column;
         gap: 0.5rem;
+        align-items: flex-start;
+    }
+    .contact-hero-buttons .btn {
+        width: auto;
+        flex: 0 1 auto;
     }
     .contact-social-link {
         max-width: none;
@@ -1579,35 +1438,55 @@ transform: translateY(-2px);
         linear-gradient(180deg, rgba(255,255,255,0.96), rgba(236,227,255,0.94));
 }
 
+.hero-buttons {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.hero-buttons .btn {
+    padding: 0.85rem 2rem;
+    font-size: 0.95rem;
+    min-width: 180px;
+}
+
+.hero-buttons .btn-secondary {
+    align-self: center;
+}
+
 @media (max-width: 768px) {
     .hero {
         min-height: auto;
-        padding: 1.5rem var(--space-sm);
+        padding: 12rem var(--space-sm);
     }
     .hero-content {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
         gap: 1.5rem;
-        text-align: center;
+        text-align: left;
         padding-inline: 1rem;
     }
     .hero-text {
         width: 100%;
         padding: 0;
-        text-align: center;
+        text-align: left;
     }
     .hero-text h1,
     .hero-text .subtitle {
         transform: none;
+        text-align: left;
     }
     .hero-buttons {
-        justify-content: center;
+        justify-content: flex-start;
         gap: 0.75rem;
         flex-wrap: wrap;
+        width: 100%;
     }
     .hero-buttons .btn {
-        flex: 1 1 100%;
+        flex: 0 1 auto;
         max-width: none;
         display: inline-flex;
         justify-content: center;
@@ -1615,6 +1494,7 @@ transform: translateY(-2px);
         text-align: center;
         padding: 0.9rem 1.8rem;
         min-width: 0;
+        width: auto;
     }
     .hero-buttons .btn-primary {
         margin-top: 0.4rem;
@@ -1913,50 +1793,6 @@ transform: translateY(-2px);
     .gallery-card iframe {
         min-height: 450px;
     }
-}
-
-@media (max-width: 992px) {
-    .hero-section .hero-content {
-        flex-direction: column;
-    }
-
-    .hero-section .hero-text {
-        padding-right: 0;
-        margin-bottom: 3rem;
-    }
-
-    .hero-section .hero-image {
-        height: 400px;
-        margin-top: 2rem;
-    }
-}
-
-.hero-buttons {
-    display: inline-flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.hero-buttons .btn {
-    padding: 0.85rem 2rem;
-    font-size: 0.95rem;
-    min-width: 180px;
-}
-
-.hero-buttons .btn-secondary {
-    align-self: center;
-}
-
-@media (max-width: 768px) {
-    .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-    }
-
 }
 
 @media (max-width: 768px) {

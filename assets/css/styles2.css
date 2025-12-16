@@ -545,116 +545,12 @@ img {
     }
 }
 
-@media (max-width: 768px) {
-    .hero {
-        min-height: auto;
-        padding-top: 4rem;
-        padding-bottom: 2rem;
-        align-items: flex-start;
-        justify-content: center;
-        
-    }
-
-    .hero::before,
-    .hero::after {
-        left: 0;
-        right: 0;
-        border-radius: 32px;
-        background: linear-gradient(180deg, rgba(188, 155, 255, 0.15), rgba(188, 155, 255, 0.35));
-        top: 20px;
-        bottom: -30px;
-        filter: blur(14px);
-    }
-
-    .hero-content {
-        width: min(900px, 100%);
-        margin-left: 1.5rem;
-        padding-right: 2.5rem;
-        justify-content: flex-start;
-        gap: 4rem;
-        align-items: stretch;
-    }
-
-    /* contenedor del título y subtítulo: sin márgenes ni padding laterales y alineado a la izquierda */
-    .hero-text {
-    text-align: left;
-    }
-
-    .hero-buttons {
-    width: 100%;
-    align-items: center;
-    }
-
-    .hero-image {
-        width: 100%;
-        margin-top: 1rem;
-        justify-content: flex-end;
-        padding-right: 0.3rem
-    }
-
-    .image-container::after {
-        display: block;
-    }
-
-    .hero-section .image-container {
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
-        padding: 1rem;
-    }
-
-    .image-container img {
-        object-fit: cover;
-    }
-
-    .contact-section {
-        padding-top: 1.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar, .navbar .nav-links, .nav-container {
-        border: none;
-    }
-
-    .hero {
-        background: transparent;
-    }
-
-    .hero-image {
-        justify-content: flex-end;
-        padding-right: 0.5rem;
-    }
-
-    .image-container::before {
-        content: '';
-        position: absolute;
-        inset: -15% 5% auto;
-        height: 70%;
-        background: rgba(188, 155, 255, 0.3);
-        border-radius: 24px;
-        filter: blur(12px);
-        z-index: -1;
-    }
-
-    .doctor-image {
-        position: relative;
-        z-index: 1;
-        object-position: center top;
-        max-height: 260px;
-    }
-
-    .hero-text .section-subtitle {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}
 
 @media (max-width: 768px) {
     /* Panel violeta compacto con padding reducido para ajustar todo en una sección */
     .hero {
         min-height: auto;
-        padding: 1.2rem 0.5rem 0.8rem;
+        padding: 12rem 0.5rem 0.8rem;
         padding-left: 0;
         align-items: flex-start;
         justify-content: flex-start;
@@ -674,7 +570,7 @@ img {
         left: auto;
         right: 0;
         top: 10px;
-        bottom: -25px;
+        bottom: 0;
         border-radius: 32px;
         background: linear-gradient(180deg, rgba(188, 155, 255, 0.18), rgba(188, 155, 255, 0.35));
         filter: blur(12px);
@@ -1504,53 +1400,7 @@ transform: translateY(-2px);
         font-size: 1.2rem;
     }
 
-    .hero-section {
-        height: auto;
-        padding-top: 100px;
-        padding-bottom: 3rem;
-    }
-
-    .hero-section::before {
-        background: linear-gradient(
-            180deg,
-            #f2f2f2 0%,
-            #f2f2f2 40%,
-            #e9e3ff 40%,
-            #e9e3ff 100%
-        );
-    }
-
-    .hero-section .hero-content {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
-        min-height: 0;
-    }
-
-    .hero-section .hero-text {
-        padding-right: 0;
-        margin-bottom: 1.5rem;
-        text-align: left;
-    }
-
-    .hero-section .hero-image {
-        width: 100%;
-        margin-top: 1.5rem;
-        justify-content: center;
-        align-items: flex-end;
-        height: auto;
-    }
-
-    .hero-section .image-container {
-        width: 85%;
-        max-width: 360px;
-        aspect-ratio: 3/4;
-        height: auto;
-        transform: rotate(0deg);
-    }
-}
-
-.back-to-top {
+    .back-to-top {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
@@ -1575,4 +1425,5 @@ transform: translateY(-2px);
     opacity: 1;
     visibility: visible;
     transform: translateY(-6px);
+}
 }
