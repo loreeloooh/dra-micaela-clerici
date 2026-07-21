@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cirugía Plástica | Dra. Micaela Clerici</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glacier+Indifference&family=Hatton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Dra. Micaela Clerici</a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Menú">
+                <span class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#sobre-la-doctora" class="nav-link"></a></li>
+                <li class="dropdown">
+                    <a href="medicina-estetica.html" class="nav-link dropdown-toggle">Medicina Estética <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="medicina-estetica.html#medicina-facial" class="dropdown-link">Facial <span class="dropdown-arrow">▶</span></a>
+                            <ul class="dropdown-submenu-content">
+                                <li><a href="medicina-estetica.html#toxina-botulinica" class="dropdown-link">Toxina Botulínica</a></li>
+                                <li><a href="medicina-estetica.html#acido-hialuronico" class="dropdown-link">Ácido Hialurónico</a></li>
+                                <li><a href="medicina-estetica.html#bioestimuladores" class="dropdown-link">Bioestimuladores</a></li>
+                                <li><a href="medicina-estetica.html#skinbooster" class="dropdown-link">Skinbooster</a></li>
+                                <li><a href="medicina-estetica.html#prp" class="dropdown-link">PRP</a></li>
+                                <li><a href="medicina-estetica.html#mesoterapia-facial" class="dropdown-link">Mesoterapia Facial</a></li>
+                                <li><a href="medicina-estetica.html#peelings" class="dropdown-link">Peelings Químicos</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="medicina-estetica.html#medicina-corporal" class="dropdown-link">Corporal <span class="dropdown-arrow">▶</span></a>
+                            <ul class="dropdown-submenu-content">
+                                <li><a href="medicina-estetica.html#lipoliticos" class="dropdown-link">Lipolíticos</a></li>
+                                <li><a href="medicina-estetica.html#celulitis" class="dropdown-link">Celulitis</a></li>
+                                <li><a href="medicina-estetica.html#flacidez" class="dropdown-link">Flacidez</a></li>
+                                <li><a href="medicina-estetica.html#mesoterapia-corporal" class="dropdown-link">Mesoterapia Corporal</a></li>
+                                <li><a href="medicina-estetica.html#reafirmacion" class="dropdown-link">Reafirmación Corporal</a></li>
+                                <li><a href="medicina-estetica.html#reduccion-localizada" class="dropdown-link">Reducción Localizada</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="cirugia-plastica.html" class="nav-link dropdown-toggle active">Cirugía Plástica <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="#cirugia-facial" class="dropdown-link">Facial <span class="dropdown-arrow">▶</span></a>
+                            <ul class="dropdown-submenu-content">
+                                <li><a href="#rinoplastia" class="dropdown-link">Rinoplastia</a></li>
+                                <li><a href="#blefaroplastia" class="dropdown-link">Blefaroplastia</a></li>
+                                <li><a href="#lifting-facial" class="dropdown-link">Lifting Facial</a></li>
+                                <li><a href="#minilifting" class="dropdown-link">Minilifting</a></li>
+                                <li><a href="#lifting-cejas" class="dropdown-link">Lifting de Cejas</a></li>
+                                <li><a href="#lifting-cuello" class="dropdown-link">Lifting de Cuello</a></li>
+                                <li><a href="#otoplastia" class="dropdown-link">Otoplastia</a></li>
+                                <li><a href="#bichectomia" class="dropdown-link">Bichectomía</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#cirugia-corporal" class="dropdown-link">Corporal <span class="dropdown-arrow">▶</span></a>
+                            <ul class="dropdown-submenu-content">
+                                <li><a href="#liposuccion" class="dropdown-link">Liposucción</a></li>
+                                <li><a href="#lipomodelacion" class="dropdown-link">Lipomodelación</a></li>
+                                <li><a href="#lipoescultura" class="dropdown-link">Lipoescultura</a></li>
+                                <li><a href="#abdominoplastia" class="dropdown-link">Abdominoplastia</a></li>
+                                <li><a href="#braquioplastia" class="dropdown-link">Lifting de Brazos</a></li>
+                                <li><a href="#cruroplastia" class="dropdown-link">Lifting de Muslos</a></li>
+                                <li><a href="#gluteoplastia" class="dropdown-link">Gluteoplastia</a></li>
+                                <li><a href="#lipofilling" class="dropdown-link">Transferencia Grasa</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#cirugia-mamaria" class="dropdown-link">Mamaria <span class="dropdown-arrow">▶</span></a>
+                            <ul class="dropdown-submenu-content">
+                                <li><a href="#aumento-mamario" class="dropdown-link">Aumento Mamario</a></li>
+                                <li><a href="#control-mamario" class="dropdown-link">Control Mamario</a></li>
+                                <li><a href="#recambio-protesis" class="dropdown-link">Recambio de Prótesis</a></li>
+                                <li><a href="#reduccion-mamaria" class="dropdown-link">Reducción Mamaria</a></li>
+                                <li><a href="#mastopexia" class="dropdown-link">Mastopexia</a></li>
+                                <li><a href="#reconstruccion-mamaria" class="dropdown-link">Reconstrucción Mamaria</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="antes-despues.html" class="nav-link">Antes y Después</a></li>
+                <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto / Turnos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+                <h1>Cirugía Plástica</h1>
+                <p class="subtitle">Procedimientos quirúrgicos para transformar tu apariencia</p>
+                <p class="hero-description">Cirugías estéticas y reconstructivas realizadas con los más altos estándares de seguridad y profesionalismo.</p>
+                <p class="hero-info">Por la naturaleza de cada procedimiento, todas las cotizaciones se determinan durante la consulta médica, donde evaluamos el tiempo quirúrgico requerido para la correcta reserva del quirófano. Contamos con la colaboración de Grupo Gamma y HPR. Todas las citas deben concretarse a través de esta página.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/543416427796" class="btn-whatsapp-circle" target="_blank" aria-label="Contactar por WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://grupogammqa.com/profesional/clerici-micaela-yael" class="btn btn-outline btn-pill" target="_blank">Pedir Turno</a>
+                    <a href="#cirugia-facial" class="btn btn-outline btn-pill">Ver Cirugías Faciales</a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+                <div class="image-container">
+                    <img src="assets/images/doctora.jpg" alt="Dra. Micaela Clerici" class="doctor-image">
+                    <div class="shape-overlay"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="hero-shape">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path d="M0,192L60,197.3C120,203,240,213,360,202.7C480,192,600,160,720,154.7C840,149,960,171,1080,181.3C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Sección Cirugía Facial -->
+    <section id="cirugia-facial" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Cirugía Facial</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Procedimientos quirúrgicos para rejuvenecer y armonizar el rostro</p>
+            </div>
+
+            <div class="treatments-grid--table" data-aos="fade-up" data-aos-delay="100">
+                <div class="treatment-cell" id="rinoplastia">
+                    <div class="treatment-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Rinoplastia</h3>
+                    <p>Cirugía estética y funcional de la nariz para mejorar su forma y armonía facial.</p>
+                </div>
+
+                <div class="treatment-cell" id="blefaroplastia">
+                    <div class="treatment-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Blefaroplastia</h3>
+                    <p>Cirugía de párpados para eliminar exceso de piel y bolsas, rejuveneciendo la mirada.</p>
+                </div>
+
+                <div class="treatment-cell" id="lifting-facial">
+                    <div class="treatment-icon">
+                        <i class="fas fa-face-smile"></i>
+                    </div>
+                    <h3>Lifting Facial</h3>
+                    <p>Cirugía para tensar la piel flácida del rostro y reducir signos de envejecimiento.</p>
+                </div>
+
+                <div class="treatment-cell" id="minilifting">
+                    <div class="treatment-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Minilifting</h3>
+                    <p>Procedimiento menos invasivo para rejuvenecer áreas específicas del rostro con recuperación rápida.</p>
+                </div>
+
+                <div class="treatment-cell" id="lifting-cejas">
+                    <div class="treatment-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <h3>Lifting de Cejas</h3>
+                    <p>Elevación de las cejas para rejuvenecer la expresión y mejorar el aspecto de la mirada.</p>
+                </div>
+
+                <div class="treatment-cell" id="lifting-cuello">
+                    <div class="treatment-icon">
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <h3>Lifting de Cuello</h3>
+                    <p>Cirugía para eliminar flacidez y pliegues en el cuello, definiendo el contorno mandibular.</p>
+                </div>
+
+                <div class="treatment-cell" id="otoplastia">
+                    <div class="treatment-icon">
+                        <i class="fas fa-ear-listen"></i>
+                    </div>
+                    <h3>Otoplastia</h3>
+                    <p>Cirugía de orejas para corregir su posición, tamaño o forma, mejorando la armonía facial.</p>
+                </div>
+
+                <div class="treatment-cell" id="bichectomia">
+                    <div class="treatment-icon">
+                        <i class="fas fa-compress"></i>
+                    </div>
+                    <h3>Bichectomía</h3>
+                    <p>Extracción de las bolas de Bichat para afinar el rostro y definir el contorno facial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cirugía Corporal -->
+    <section id="cirugia-corporal" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Cirugía Corporal</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Procedimientos quirúrgicos para esculpir y mejorar tu silueta</p>
+            </div>
+
+            <div class="treatments-grid--table" data-aos="fade-up" data-aos-delay="100">
+                <div class="treatment-cell" id="liposuccion">
+                    <div class="treatment-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Liposucción</h3>
+                    <p>Extracción de grasa localizada para esculpir el contorno corporal en áreas específicas.</p>
+                </div>
+
+                <div class="treatment-cell" id="lipomodelacion">
+                    <div class="treatment-icon">
+                        <i class="fas fa-shapes"></i>
+                    </div>
+                    <h3>Lipomodelación</h3>
+                    <p>Técnica avanzada de liposucción que modela el cuerpo con resultados más definidos y naturales.</p>
+                </div>
+
+                <div class="treatment-cell" id="lipoescultura">
+                    <div class="treatment-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Lipoescultura</h3>
+                    <p>Combinación de liposucción y transferencia de grasa para esculpir y redefinir la silueta.</p>
+                </div>
+
+                <div class="treatment-cell" id="abdominoplastia">
+                    <div class="treatment-icon">
+                        <i class="fas fa-child-reaching"></i>
+                    </div>
+                    <h3>Abdominoplastia</h3>
+                    <p>Cirugía para eliminar exceso de piel y grasa abdominal, tensando los músculos del abdomen.</p>
+                </div>
+
+                <div class="treatment-cell" id="braquioplastia">
+                    <div class="treatment-icon">
+                        <i class="fas fa-hand"></i>
+                    </div>
+                    <h3>Lifting de Brazos</h3>
+                    <p>Cirugía para eliminar flacidez y exceso de piel en los brazos, mejorando su contorno.</p>
+                </div>
+
+                <div class="treatment-cell" id="cruroplastia">
+                    <div class="treatment-icon">
+                        <i class="fas fa-person-walking"></i>
+                    </div>
+                    <h3>Lifting de Muslos</h3>
+                    <p>Cirugía para eliminar flacidez y exceso de piel en la parte interna de los muslos.</p>
+                </div>
+
+                <div class="treatment-cell" id="gluteoplastia">
+                    <div class="treatment-icon">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                    <h3>Gluteoplastia</h3>
+                    <p>Aumento y modelado de glúteos mediante implantes o transferencia de grasa propia.</p>
+                </div>
+
+                <div class="treatment-cell" id="lipofilling">
+                    <div class="treatment-icon">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <h3>Transferencia Grasa</h3>
+                    <p>Reinyección de grasa propia para añadir volumen y mejorar contornos en diversas áreas del cuerpo.</p>
+                </div>
+
+                <div class="treatment-cell" id="dermolipectomia">
+                    <div class="treatment-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Dermolipectomía Abdominal</h3>
+                    <p>Cirugía para eliminar exceso de piel y grasa en el abdomen, similar a la abdominoplastia pero más extensa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cirugía Mamaria -->
+    <section id="cirugia-mamaria" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Cirugía Mamaria</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Procedimientos quirúrgicos para mejorar la forma y tamaño de los senos</p>
+            </div>
+
+            <div class="treatments-grid--table" data-aos="fade-up" data-aos-delay="100">
+                <div class="treatment-cell" id="aumento-mamario">
+                    <div class="treatment-icon">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <h3>Aumento Mamario</h3>
+                    <p>Colocación de implantes mamarios para aumentar el tamaño y mejorar la forma de los senos.</p>
+                </div>
+
+                <div class="treatment-cell" id="control-mamario">
+                    <div class="treatment-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Control Mamario</h3>
+                    <p>Evaluación y seguimiento de implantes mamarios para asegurar su correcto estado y funcionamiento.</p>
+                </div>
+
+                <div class="treatment-cell" id="recambio-protesis">
+                    <div class="treatment-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Recambio de Prótesis</h3>
+                    <p>Cirugía para reemplazar implantes mamarios antiguos por nuevos, mejorando resultados y seguridad.</p>
+                </div>
+
+                <div class="treatment-cell" id="reduccion-mamaria">
+                    <div class="treatment-icon">
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <h3>Reducción Mamaria</h3>
+                    <p>Cirugía para reducir el tamaño de los senos, aliviando molestias físicas y mejorando la estética.</p>
+                </div>
+
+                <div class="treatment-cell" id="mastopexia">
+                    <div class="treatment-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <h3>Mastopexia</h3>
+                    <p>Lifting de senos para elevar y reafirmar el busto caído, recuperando su posición y forma natural.</p>
+                </div>
+
+                <div class="treatment-cell" id="reconstruccion-mamaria">
+                    <div class="treatment-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Reconstrucción Mamaria</h3>
+                    <p>Cirugía reconstructiva para reconstruir el seno después de mastectomía o trauma, restaurando la forma.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Reconstrucciones -->
+    <section id="reconstrucciones" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Reconstrucciones</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Procedimientos reconstructivos para restaurar forma y función tras trauma o cirugía</p>
+            </div>
+
+            <div class="treatments-grid--table" data-aos="fade-up" data-aos-delay="100">
+                <div class="treatment-cell" id="reconstruccion-facial">
+                    <div class="treatment-icon">
+                        <i class="fas fa-user-injured"></i>
+                    </div>
+                    <h3>Reconstrucción Facial</h3>
+                    <p>Cirugía reconstructiva para restaurar la apariencia y función del rostro tras traumatismos o cirugías.</p>
+                </div>
+
+                <div class="treatment-cell" id="reconstruccion-corporal">
+                    <div class="treatment-icon">
+                        <i class="fas fa-person"></i>
+                    </div>
+                    <h3>Reconstrucción Corporal</h3>
+                    <p>Procedimientos para reconstruir áreas del cuerpo afectadas por trauma, quemaduras o cirugías previas.</p>
+                </div>
+
+                <div class="treatment-cell" id="reconstruccion-mamaria-general">
+                    <div class="treatment-icon">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                    <h3>Reconstrucción Mamaria</h3>
+                    <p>Reconstrucción del seno después de mastectomía por cáncer u otras condiciones, restaurando la forma natural.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/543416427796" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <div class="contact-footer-wrapper" id="footer-panel">
+        <footer class="footer footer-panel">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Dra. Micaela Clerici</h3>
+                    <p>Medicina Estética</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/543416427796" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="medicina-estetica.html">Medicina Estética</a></li>
+                        <li><a href="cirugia-plastica.html">Cirugía Plástica</a></li>
+                        <li><a href="antes-despues.html">Antes y Después</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Pellegrini 384 – Piso 1, Rosario</p>
+                    <p><i class="fas fa-phone-alt"></i> +54 9 3416 42-7796</p>
+                    <p><i class="far fa-envelope"></i> info@dramicaelaclerici.com</p>
+                    <a href="https://wa.me/543416427796" class="footer-cta" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> Agendá tu consulta
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dra. Micaela Clerici. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidad</a>
+                    <span>|</span>
+                    <a href="#">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+        });
+    </script>
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
+

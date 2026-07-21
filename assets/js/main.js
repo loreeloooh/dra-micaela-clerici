@@ -26,13 +26,51 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Close menu when clicking on a nav link
-        document.querySelectorAll('.nav-link').forEach(link => {
+        document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(link => {
             link.addEventListener('click', () => {
                 closeMobileMenu();
             });
         });
     }
     
+    // Mobile dropdown functionality
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 992) {
+                e.preventDefault();
+                e.stopPropagation();
+                const dropdown = this.closest('.dropdown');
+                dropdown.classList.toggle('active');
+                
+                const arrow = this.querySelector('.dropdown-arrow');
+                if (arrow) {
+                    arrow.style.transform = dropdown.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            }
+        });
+    });
+
+    // Mobile submenu functionality
+    const submenuToggles = document.querySelectorAll('.dropdown-link');
+    submenuToggles.forEach(link => {
+        if (link.querySelector('.dropdown-arrow')) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const submenu = this.closest('.dropdown-submenu');
+                    submenu.classList.toggle('active');
+                    
+                    const arrow = this.querySelector('.dropdown-arrow');
+                    if (arrow) {
+                        arrow.style.transform = submenu.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
+                    }
+                }
+            });
+        }
+    });
+
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     const backToTop = document.getElementById('back-to-top');
@@ -245,3 +283,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+ 
+ / /   F A Q   A c c o r d i o n   f u n c t i o n a l i t y 
+ d o c u m e n t . a d d E v e n t L i s t e n e r ( " D O M C o n t e n t L o a d e d " ,   f u n c t i o n ( )   { 
+         c o n s t   f a q Q u e s t i o n s   =   d o c u m e n t . q u e r y S e l e c t o r A l l ( " . f a q - q u e s t i o n " ) ; 
+         
+         f a q Q u e s t i o n s . f o r E a c h ( q u e s t i o n   = >   { 
+                 q u e s t i o n . a d d E v e n t L i s t e n e r ( " c l i c k " ,   f u n c t i o n ( )   { 
+                         c o n s t   f a q I t e m   =   t h i s . c l o s e s t ( " . f a q - i t e m " ) ; 
+                         c o n s t   i s A c t i v e   =   f a q I t e m . c l a s s L i s t . c o n t a i n s ( " a c t i v e " ) ; 
+                         
+                         / /   C l o s e   a l l   o t h e r   F A Q   i t e m s 
+                         d o c u m e n t . q u e r y S e l e c t o r A l l ( " . f a q - i t e m " ) . f o r E a c h ( i t e m   = >   { 
+                                 i t e m . c l a s s L i s t . r e m o v e ( " a c t i v e " ) ; 
+                         } ) ; 
+                         
+                         / /   T o g g l e   c u r r e n t   i t e m 
+                         i f   ( ! i s A c t i v e )   { 
+                                 f a q I t e m . c l a s s L i s t . a d d ( " a c t i v e " ) ; 
+                         } 
+                 } ) ; 
+         } ) ; 
+ } ) ;  
+ 
